@@ -10,30 +10,35 @@ print(' 3 - Abacaxi ') # R$ 12.00
 print(' 4 - Manga ') # R$ 12.00
 sbr = (int(input('Selecione o numero correpondente ao sabor esccolhido:')))
 qtd = (int(input('Selecione a quantidade:')))
-if sbr == 1 :
-    pagar = qtd * 12.00
-    print (f'O sabor escolhido foi: {s1} ')
-    print (f'A quantidade escolhida foi: {qtd}')
-    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
-else :
-    if sbr == 2 :
-        pagar = qtd * 14.00
-        print(f'O sabor escolhido foi: {s2} ')
-        print(f'A quantidade escolhida foi: {qtd}')
-        print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
+
+if qtd <= 0:
+    print('Quantidade inválida!')
+
+else:
+    if sbr == 1 :
+        pagar = qtd * 12.00
+        print (f'O sabor escolhido foi: {s1} ')
+        print (f'A quantidade escolhida foi: {qtd}')
+        print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
     else :
-        if sbr == 3 :
-            pagar = qtd * 12.00
-            print(f'O sabor escolhido foi: {s3} ')
+        if sbr == 2 :
+            pagar = qtd * 14.00
+            print(f'O sabor escolhido foi: {s2} ')
             print(f'A quantidade escolhida foi: {qtd}')
-            print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
-        else:
-             if sbr == 4 :
-               pagar = qtd * 12.00
-               print(f'O sabor escolhido foi: {s4} ')
-               print(f'A quantidade escolhida foi: {qtd}')
-               print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
-             else :
+            print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
+        else :
+            if sbr == 3 :
+                pagar = qtd * 12.00
+                print(f'O sabor escolhido foi: {s3} ')
+                print(f'A quantidade escolhida foi: {qtd}')
+                print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
+            else:
+                if sbr == 4 :
+                    pagar = qtd * 12.00
+                    print(f'O sabor escolhido foi: {s4} ')
+                    print(f'A quantidade escolhida foi: {qtd}')
+                    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
+                else :
                  print('Informação inexistente!')
 
 # Utilizando a condicional de múltipla escolha (elif):
@@ -50,26 +55,30 @@ print(' 3 - Abacaxi ') # R$ 12.00
 print(' 4 - Manga ') # R$ 12.00
 sbr = (int(input('Selecione o numero correpondente ao sabor esccolhido:')))
 qtd = (int(input('Selecione a quantidade:')))
-if sbr == 1 :
+
+if qtd <= 0:
+    print('Quantidade inválida')
+    
+elif sbr == 1 :
     pagar = qtd * 12.00
     print (f'O sabor escolhido foi: {s1} ')
     print (f'A quantidade escolhida foi: {qtd}')
-    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
+    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
 elif sbr == 2 :
     pagar = qtd * 14.00
     print(f'O sabor escolhido foi: {s2} ')
     print(f'A quantidade escolhida foi: {qtd}')
-    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
+    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
 elif sbr == 3 :
     pagar = qtd * 12.00
     print(f'O sabor escolhido foi: {s3} ')
     print(f'A quantidade escolhida foi: {qtd}')
-    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
+    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
 elif sbr == 4 :
     pagar = qtd * 12.00
     print(f'O sabor escolhido foi: {s4} ')
     print(f'A quantidade escolhida foi: {qtd}')
-    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar}')
+    print (f'Total a pagar baseado nas suas escolhas: R$ {pagar:.2f}')
 else :
     print('Informação inexistente!')
 
